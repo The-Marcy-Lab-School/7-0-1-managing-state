@@ -2,7 +2,7 @@ const InstagramPost = ({ picture }) => {
 
   let likes = 0;
 
-  const handleClick = {
+  const handleClick = () => {
 
   }
 
