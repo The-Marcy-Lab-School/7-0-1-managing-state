@@ -244,12 +244,17 @@ const NewPetForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // we could grab e.target.src and e.target.caption
+    // we could grab e.target.src.value and e.target.caption.value
     // or we can just use the state values
 
     console.log(src, caption);
 
-    e.target.reset();
+    // This doesn't work anymore because the value
+    // of the inputs is determined by the value={} prop:
+    // e.target.reset(); 
+
+    setSrc('');
+    setCaption('');
   }
 
   return (
