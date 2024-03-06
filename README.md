@@ -7,7 +7,7 @@ In this lesson, we will look at how to respond to events in React and use those 
 - [Instapets](#instapets)
 - [Handling Changing State](#handling-changing-state)
   - [Our Components Already Render Data](#our-components-already-render-data)
-  - [Changing State In Reaction to Events](#changing-state-in-reaction-to-events)
+  - [Changing A Variable In Reaction to Events](#changing-a-variable-in-reaction-to-events)
 - [`useState`](#usestate)
   - [Import useState from react](#import-usestate-from-react)
   - [Invoke useState at the top of your component](#invoke-usestate-at-the-top-of-your-component)
@@ -77,7 +77,7 @@ A stateful component is one that renders state — data values that may change.
 > These values are not considered state because they are hard-coded! They will not change.
 </details><br>
 
-### Changing State In Reaction to Events
+### Changing A Variable In Reaction to Events
 
 Let's make `likes` a piece of mutable state.
 
@@ -160,7 +160,7 @@ const handleClick = () => {
 
 - When the event handler is clicked, we'll invoke `setLikes` which either accepts:
   - the new value that we want to set `likes` to or...
-  - a callback function that is given the current value of `likes` (this is the best option when the next value is based on the current value)
+  - a callback function for turning the current value of `likes` into the next value of `likes`.
 - As we saw, incrementing `likes` directly does not cause the component to re-render
 - `setLikes` will cause the component to re-render with the provided value as the new value for `likes`
 
