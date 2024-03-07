@@ -281,7 +281,7 @@ const NewPetForm = () => {
 }
 ```
 
-* how each input has a `value` and an `onChange` prop associated with a particular piece of state.
+* Notice how each input has a `value` and an `onChange` prop associated with a particular piece of state.
 * When it is time to submit the form, we can easily use the `src` and `caption` state values without digging through the form.
 
 ## Discussion! Lifting State Up
