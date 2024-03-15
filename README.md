@@ -233,7 +233,15 @@ Now, how do we handle the submission event?
 
 ### Controlled Forms
 
-A **controlled form** is a form element whose input values are controlled by React state rather than through DOM manipulation. 
+A **controlled form** is a form element whose input values are controlled by React state rather than through DOM manipulation.
+
+To create a controlled form, we will:
+
+1. Create a piece of state for each input we want to control
+2. Assign the `value` prop of the input to the input state value we just created
+3. Assign an `onChange` handler to the input that invokes the state setter function
+4. When handling submissions, we can simply reference the input state values.
+5. Remember to reset the state values after submission.
 
 ```jsx
 const NewPetForm = () => {
