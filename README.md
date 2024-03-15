@@ -246,25 +246,23 @@ To create a controlled form, we will:
 ```jsx
 const NewPetForm = () => {
 
+  // 1. Create a piece of state for each input we want to control
   const [src, setSrc] = useState('');
   const [caption, setCaption] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // we could grab e.target.src.value and e.target.caption.value
-    // or we can just use the state values
-
+    // 4. When handling submissions, we can simply reference the input state values.
     console.log(src, caption);
 
-    // This doesn't work anymore because the value
-    // of the inputs is determined by the value={} prop:
-    // e.target.reset(); 
-
+    // 5. Remember to reset the state values after submission.
     setSrc('');
     setCaption('');
   }
 
+  // 2. Assign the `value` prop of the input to the input state value we just created
+  // 3. Assign an `onChange` handler to the input that invokes the state setter function
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="src-input">Image Source:</label>
